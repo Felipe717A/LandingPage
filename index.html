@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barco Autónomo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            --primary-color: #004c8c;
+            --secondary-color: #ffffff;
+            --highlight-color: #ffcc00;
+        }
+        header, footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav, .user-menu {
+            display: flex;
+            gap: 20px;
+        }
+        nav a, .user-menu a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover, .user-menu a:hover {
+            background-color: var(--highlight-color);
+            color: var(--primary-color);
+        }
+        .hero {
+            padding: 60px 40px;
+            background: linear-gradient(rgba(0,76,140,0.7), rgba(0,76,140,0.7)), url('https://s1.eestatic.com/2020/09/11/omicrono/omicrono_519959686_159684571_1706x960.jpg') center/cover no-repeat;
+            color: var(--secondary-color);
+            text-align: center;
+            position: relative;
+        }
+        .cta-button {
+            background-color: var(--highlight-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: 2px solid var(--highlight-color);
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 20px;
+            margin: 20px;
+        }
+        .feature-item {
+            flex: 1;
+            margin: 0 10px;
+            padding: 20px;
+            border: 3px solid var(--primary-color);
+            border-radius: 10px;
+            background-color: var(--secondary-color);
+            text-align: center;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .feature-item:hover {
+            box-shadow: 0 0 20px rgba(0, 76, 140, 0.5);
+            transform: scale(1.05);
+        }
+        .feature-icon {
+            width: 90px;
+            margin-bottom: 25px;
+        }
+        .applications, .contact {
+            padding: 30px 20px;
+            margin: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        form label, form input, form textarea {
+            display: block;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        form input[type="submit"] {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="https://img.freepik.com/vector-premium/concepto-diseno-logo-bote-pequeno_28897-801.jpg" alt="Logo" style="width: 60px;">
+    <div>
+        <nav>
+            <a href="#home">Inicio</a>
+            <a href="#features">Características</a>
+            <a href="#applications">Aplicaciones</a>
+            <a href="#contact">Contacto</a>
+            <a href="#">Perfil</a>
+            <a href="#">Configuraciones</a>
+            <a href="#">Ayuda</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Descubre la Revolución en la Exploración Marina</h1>
+    <p>Donde la tecnología se encuentra con la inmensidad del mar. Vive una nueva era de navegación inteligente, capacidades de investigación y seguridad.</p>
+    <a href="#features" class="cta-button">Descubre Más</a>
+</section>
+
+<section class="features">
+    <div class="feature-item">
+        <img src="https://cdn.pixabay.com/photo/2020/09/11/17/31/compass-5563772_960_720.png" alt="Icono de Navegación" class="feature-icon">
+        <h2>Navegación Inteligente</h2>
+        <p>Navegación avanzada impulsada por IA que optimiza tu ruta teniendo en cuenta el viento, la marea y otras condiciones marinas.</p>
+    </div>
+    <div class="feature-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/2345/2345221.png" alt="Icono de Investigación" class="feature-icon">
+        <h2>Listo para Investigación</h2>
+        <p>Un laboratorio flotante preparado para la exploración en alta mar, estudios ambientales e investigación en biología marina.</p>
+    </div>
+    <div class="feature-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/1059/1059572.png" alt="Icono de Pasajero" class="feature-icon">
+        <h2>Seguridad para Pasajeros</h2>
+        <p>Funciones avanzadas de seguridad aseguran que cada viaje no solo sea ilustrativo sino también seguro.</p>
+    </div>
+</section>
+
+<section class="applications">
+    <h2>Un Mundo de Posibilidades Te Espera</h2>
+    <p>Desde misiones de investigación hasta tours recreativos, nuestro barco autónomo está diseñado para una plétora de aplicaciones:</p>
+    <ul>
+        <li>Recolección de especímenes biológicos en alta mar</li>
+        <li>Mapeo y trazado de aguas inexploradas</li>
+        <li>Monitoreo de la contaminación del agua y sus efectos</li>
+        <li>Tours marinos con un toque del futuro</li>
+    </ul>
+</section>
+
+<section class="contact">
+    <h2>Ponte en Contacto con Nosotros</h2>
+    <form action="#">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        <input type="submit" value="Enviar">
+    </form>
+</section>
+
+<footer>
+    <div>© 2023 Barcos Autónomos S.A.</div>
+    <div>
+        
+    </div>
+</footer>
+
+</body>
+</html>
